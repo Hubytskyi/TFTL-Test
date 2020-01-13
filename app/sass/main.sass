@@ -1,0 +1,339 @@
+@import vars
+@import fonts
+@import libs
+
+*
+	margin: 0
+	padding: 0
+
+// Start Loading... ==========================
+.preloader
+	position: fixed
+	left: 0
+	top: 0
+	right: 0
+	bottom: 0
+	background: #fff
+	z-index: 1001
+
+.preloader__row
+	position: relative
+	display: flex
+	justify-content: center
+	align-items: center
+	height: 100%
+
+.loaded .preloader 
+	display: none
+// End Loading... ==========================
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+a,
+a:hover,
+a:focus,
+a:active
+	color: $text
+	text-decoration: none
+
+li
+	list-style: none
+
+body
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+	font-size: 16px
+	min-width: 320px
+	// position: relative
+	line-height: 1.65
+	font-family: 'TT Travel'
+	overflow: hidden
+	color: $text
+	height: 100vh
+
+.top-header
+	width: 100%
+	z-index: 101
+
+.menu, .menu-mobile
+	position: absolute
+	right: 48px
+	top: 43px
+	text-align: right
+
+.menu-mobile
+	cursor: pointer
+
+.burger-button
+	content: ''
+	background: rgba(40, 40, 40, 0.57)
+	width: 20px
+	height: 1px
+	&::after
+		content: ''
+		background: rgba(40, 40, 40, 0.57)
+		width: 20px
+		height: 1px
+		bottom: -5px
+		right: 0
+		position: absolute
+
+
+.logo
+	position: relative
+	top: 40px
+	left: 47px
+
+.vector-top
+	position: absolute
+	top: 0
+	display: flex
+	justify-content: center
+	width: 100%
+
+.container
+	height: 100%
+	position: relative
+
+// .swiper-container
+// 	width: 100%
+// 	height: 100%
+	
+.slider-custom
+	display: flex
+	justify-content: center
+	align-items: center
+	position: relative
+
+// Start image slider ==========================
+.slider-custom__first:nth-child(1) 
+	position: absolute
+	width: 476px
+	height: 702px
+	background: url(../img/_src/image1.png)
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+	transform: rotate(1.5deg)
+	
+.slider-custom__first:nth-child(2n) 
+	position: relative
+	width: 238px
+	height: 331px
+	left: -200px
+	top: -102px
+	background-image: url(../img/_src/image2.png)
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+	transform: rotate(1.1deg)
+	
+.slider-custom__first:nth-child(3n)
+	position: relative
+	width: 345px
+	height: 238px
+	left: 200px
+	top: 200px
+	background-image: url(../img/_src/image3.png)
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+	transform: rotate(2.03deg)
+	
+.slider-custom__second:nth-child(1) 
+	position: absolute
+	width: 476px
+	height: 702px
+	background: url(../img/_src/image2.png)
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+	transform: rotate(1.5deg)
+	
+.slider-custom__second:nth-child(2n) 
+	position: relative
+	width: 238px
+	height: 331px
+	left: -200px
+	top: -102px
+	background-image: url(../img/_src/image3.png)
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+	transform: rotate(1.1deg)
+	
+.slider-custom__second:nth-child(3n)
+	position: relative
+	width: 345px
+	height: 238px
+	left: 200px
+	top: 200px
+	background-image: url(../img/_src/image1.png)
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+	transform: rotate(2.03deg)
+
+.slider-custom__third:nth-child(1) 
+	position: absolute
+	width: 476px
+	height: 702px
+	background: url(../img/_src/image3.png)
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+	transform: rotate(1.5deg)
+	
+.slider-custom__third:nth-child(2n) 
+	position: relative
+	width: 238px
+	height: 331px
+	left: -200px
+	top: -102px
+	background-image: url(../img/_src/image1.png)
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+	transform: rotate(1.1deg)
+	
+.slider-custom__third:nth-child(3n)
+	position: relative
+	width: 345px
+	height: 238px
+	left: 200px
+	top: 200px
+	background-image: url(../img/_src/image2.png)
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+	transform: rotate(2.03deg)
+// End image slider ==========================
+
+.header-slider__item span
+	visibility: hidden
+
+// Start text slider ==========================
+.header-slider
+	position: absolute
+	top: 0
+	height: 100%
+	width: 100%
+
+.header-slider__block
+	position: relative
+	top: 0
+	height: 100%
+	width: 100%
+
+.header-slider__block .swiper-slide-active
+	color: $accent!important
+	text-shadow: none!important
+	z-index: 99997
+
+.header-slider__block .swiper-slide-prev,
+.header-slider__block .swiper-slide-duplicate-next,
+	position: relative
+	left: -400px
+	z-index: 1
+
+.header-slider__block .swiper-slide-next,
+.header-slider__block .swiper-slide-duplicate-prev
+	position: relative
+	right: -400px
+	z-index: 1
+
+.header-slider__item
+	font-family: Schnyder Cond XL Demi
+	font-size: 145px
+	letter-spacing: 8px
+	line-height: 86%
+	text-transform: uppercase
+	color: #fff
+	z-index: 99
+	position: relative
+	align-items: center
+	display: flex
+	justify-content: center
+	text-align: center
+	text-shadow: $accent 1px 0px, $accent 1px 1px, $accent 0px 1px, $accent -1px 1px, $accent -1px 0px, $accent -1px -1px, $accent 0px -1px, $accent 1px -1px
+
+.header-slider
+	z-index: 100
+
+.swiper-container__custom
+	width: 100%
+	height: 100%
+// End text slider ==========================
+
+.top-header
+	position: absolute
+	top: 0
+	font-size: 11px
+
+.footer
+	position: absolute
+	bottom: 47px
+	left: 48px
+	display: flex
+	font-size: 11px
+	letter-spacing: 0.02em
+	width: 100%
+	.fb
+		left: 72px
+		position: relative
+		cursor: pointer
+		&::before
+			content: ''
+			position: absolute
+			width: 56px
+			height: 1px
+			left: -64px
+			top: 50%
+			background-color: #393939
+
+.inst
+	cursor: pointer
+
+.swiper-slide-active:hover
+	cursor: url(../img/_src/cursor.png), auto
+
+.tooltip
+	display: none
+	z-index: 99998
+	position: absolute
+	width: 40px
+	height: 10px
+	font-family: TT Travels
+	font-size: 8px
+	line-height: 10px
+	letter-spacing: 0.02em
+	text-transform: uppercase
+	color: #000000
+
+
+// Start animation svg ==========================
+.line-animation
+	stroke-dashoffset: 1920
+	stroke-dasharray: 1920
+	animation: animdash 7s infinite 0s
+
+@keyframes animdash
+	to
+		stroke-dashoffset: 0
+// End animation svg ==========================
+		
+
+@import media
