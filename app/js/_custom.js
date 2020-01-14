@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		spaceBetween: 30,
 		effect: 'fade',
 		loop: true,
+		grabCursor: true,
 		thumbs:{
 			swiper: headerSlider
 		}
@@ -11,14 +12,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	var headerSlider = new Swiper('.header-slider', {
 		slidesPerView: 3,
-		// spaceBetween: 900,
 		centeredSlides: true,
 		loop: true,
 		thumbs: {
 			swiper: swiperSlide,
 		}
 	});
-	headerSlider.activeIndex
 
 	const scene = document.getElementById('scene');
 	const parallaxInstanceFirst = new Parallax(scene);
