@@ -32,14 +32,14 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 
 
-		document.querySelector('.header-slider__block .swiper-slide-active').onmousemove = function(e){
+		document.querySelector('.header-slider__block').onmousemove = function(e){
 			var X = e.pageX;
 			var Y = e.pageY;
 			var top = Y - 15 + 'px';
 			var left = X + 10 + 'px';
 			document.getElementById('tip').style=`display:block; top:${top}; left:${left}`
 		};
-		document.querySelector('.header-slider__block .swiper-slide-active').onmouseout = function(){
+		document.querySelector('.header-slider__block').onmouseout = function(){
 			document.getElementById('tip').style = 'display:none'
 		};
 	
