@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		spaceBetween: 30,
 		effect: 'fade',
 		loop: true,
-		grabCursor: true,
 		thumbs:{
 			swiper: headerSlider
 		}
